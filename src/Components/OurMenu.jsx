@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Category from "./Category";
 import Posts from "./Posts";
-import menu from "../data";
+import menus from "../data";
 
 const OurMenu = ({ category }) => {
-  const [menu, setMenu] = useState(menu);
+  const [menu, setMenu] = useState(menus);
   const [cate, setCate] = useState([]);
 
   useEffect(() => {
