@@ -3,16 +3,11 @@ import Category from "./Category";
 import Posts from "./Posts";
 import menus from "../data";
 
-const OurMenu = ({ category }) => {
-  const [menu, setMenu] = useState(menus);
-  const [cate, setCate] = useState([]);
+const allCategories = ["All", ...new Set(menus.map((menu) => menu.category))];
 
-  useEffect(() => {
-    const categor = menu.map((item) => item.category);
-    const setCates = new Set(categor);
-    setCate(Array.from[setCates]);
-    console.log(setCates);
-  }, []);
+const OurMenu = () => {
+  const [menu, setMenu] = useState(menus);
+  const [category, setCategory] = useState(allCategories);
 
   return (
     <main>
@@ -21,13 +16,8 @@ const OurMenu = ({ category }) => {
           <h2>our menu</h2>
           <div className="underline"></div>
         </div>
-        {cate &&
-          cate.map((category) => (
-            <div className="btn-container">
-              <Category category={category} />
-            </div>
-          ))}
-        <Posts />
+        <Category category={category} />
+        <Posts menus={menu} />
       </section>
     </main>
   );

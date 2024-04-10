@@ -1,10 +1,10 @@
 import React from "react";
 import menu from "../data";
 
-const Posts = ({ title, desc, img, price, id }) => {
+const Posts = ({ menus }) => {
   return (
     <div className="section-center">
-      {menu.map((item) => (
+      {menus.map((item) => (
         <article className="menu-item" key={item.id}>
           <img src={item.img} className="photo" alt={item.desc} />
           <div className="item-info">
