@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const Category = ({ category }) => {
-  const [name, setName] = useState('All');
+const Category = ({ category, filterMenus }) => {
+  const [name, setName] = useState("All");
 
-  const nameHandler = (e) => {
-    setName(e.target.value);
-    console.log(e.target.value);
-  };
+  // const nameHandler = (e) => {
+  //   setName(e.target.value);
+  //   console.log(e.target.value);
+  // };
 
   return (
     <div className="btn-container">
@@ -16,7 +16,10 @@ const Category = ({ category }) => {
           value={cate}
           className={`filter-btn ${name === cate && "highlight"}`}
           key={cate}
-          onClick={(e) => nameHandler(e)}
+          onClick={(e) => {
+            setName(cate);
+            filterMenus(cate);
+          }}
         >
           {cate}
         </button>

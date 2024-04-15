@@ -9,8 +9,8 @@ const Posts = ({ menus }) => {
           <img src={item.img} className="photo" alt={item.desc} />
           <div className="item-info">
             <header>
-              <h4>Menu Title</h4>
-              <h4 className="price">${item.price}</h4>
+              <h4>{item.title}</h4>
+              <h4 className="price">{item.price}$</h4>
             </header>
             <p className="item-text">{item.desc}</p>
           </div>
