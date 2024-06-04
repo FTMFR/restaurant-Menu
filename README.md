@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![preview](https://github.com/FTMFR/restaurant-Menu/assets/89690674/365846f9-7585-4947-a024-b9e602abddc8)
+
 
 ## Available Scripts
 
